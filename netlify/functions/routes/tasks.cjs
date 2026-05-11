@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const { pool } = require('../db');
-const authMiddleware = require('../middleware/auth');
+const { pool } = require('../db.cjs');
+const authMiddleware = require('../middleware/auth.cjs');
 
 // add new task
 router.post('/', authMiddleware, async (req, res) => {

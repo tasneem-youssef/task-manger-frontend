@@ -1,9 +1,9 @@
 const express = require('express');
 const serverless = require('serverless-http');
 const cors = require('cors');
-const { initDB } = require('./db');
-const authRoutes = require('./routes/auth');
-const taskRoutes = require('./routes/tasks');
+const { initDB } = require('./db.cjs');
+const authRoutes = require('./routes/auth.cjs');
+const taskRoutes = require('./routes/tasks.cjs');
 
 const app = express();
 
