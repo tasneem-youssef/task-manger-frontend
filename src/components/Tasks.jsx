@@ -40,7 +40,7 @@ const Tasks = () => {
 
     const fetchTasks = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/tasks', {
+        const res = await axios.get('/api/tasks', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setTasks(res.data);
@@ -62,7 +62,7 @@ const Tasks = () => {
 
     try {
       const res = await axios.post(
-        'http://localhost:5000/api/tasks',
+        '/api/tasks',
         { title, description ,dueDate},
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -79,7 +79,7 @@ const Tasks = () => {
   const handleEditClick =async (taskId) => {
 try{
 const token = localStorage.getItem('token');
-const res=await axios.get(`http://localhost:5000/api/tasks/${taskId}`,{
+const res=await axios.get(`/api/tasks/${taskId}`,{
 headers:{Authorization:`Bearer ${token}`},
 });
 const task=res.data;
@@ -91,7 +91,6 @@ setEditCompleted(task.completed);
 setOpen(true);
 }catch(err){
 console.error(err.response?.data || err.message);
-console.log(task.dueDate)
 alert("Failed to fetch task")
 }
   }
@@ -111,7 +110,7 @@ alert("Failed to fetch task")
       completed: editCompleted,
     }
     console.log('Sending update:', updatedTask); // Debug log
-    const res=await axios.put(`http://localhost:5000/api/tasks/${editTaskId}`,updatedTask,{
+    const res=await axios.put(`/api/tasks/${editTaskId}`,updatedTask,{
       headers:{Authorization:`Bearer ${token}`},
     }    
   )
@@ -134,7 +133,7 @@ alert("Failed to fetch task")
   const handledeleteTask=async(taskId)=>{
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:5000/api/tasks/${taskId}`, {
+      await axios.delete(`/api/tasks/${taskId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setTasks(tasks.filter((task) => task._id !== taskId));
