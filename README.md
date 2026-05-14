@@ -2,6 +2,13 @@
 
 A modern and responsive frontend for a task management application, built with React.js. This application provides a user-friendly interface for managing tasks, integrated with a backend API to handle task CRUD operations and user authentication.
 
+
+<p align="center">
+<img src="./src/components/assets/poster.jpeg" alt="poster" width="800"/>
+</p>
+
+
+
 ## Features
 - **Task Management**: Create, view, update, and delete tasks with details like title, description, status, and due date.
 - **User Authentication**: Secure login and registration forms with JWT-based authentication.
