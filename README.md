@@ -2,11 +2,11 @@
 
 A modern and responsive frontend for a task management application, built with React.js. This application provides a user-friendly interface for managing tasks, integrated with a backend API to handle task CRUD operations and user authentication.
 
-
+<a href="https://task-manager-79.netlify.app/login" target="_blank">
 <p align="center">
 <img src="./src/components/assets/poster.jpeg" alt="poster" width="800"/>
 </p>
-
+</a>
 
 
 ## Features
@@ -98,6 +98,9 @@ This frontend connects to the [Task Manager Backend](https://github.com/Nemo97-7
 - **POST /api/tasks**: Create a new task.
 - **PUT /api/tasks/:id**: Update a task.
 - **DELETE /api/tasks/:id**: Delete a task.
+
+## Demo
+for live preview <a href="https://task-manager-79.netlify.app/login" target="_blank">Demo</a>
 
 ## Contact
 - **Email**: tasneemyoussef61@gmail.com
