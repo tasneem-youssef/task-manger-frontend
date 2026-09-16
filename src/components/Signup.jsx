@@ -14,8 +14,8 @@ const Register = () => {
   const [name, setName] = useState("");
   const navigate = useNavigate();
 
-  const Base_URL = "https://task-manager-backend-six-zeta.vercel.app";
-
+  const Base_URL =
+    "https://task-manager-backend-production-06f3.up.railway.app";
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {

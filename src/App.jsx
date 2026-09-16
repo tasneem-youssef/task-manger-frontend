@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Tasks from "./components/Tasks";
@@ -37,16 +36,15 @@ const App = () => {
                 login
               </NavLink>
             </li>
-            <li >
+            <li>
               <Button
-              endDecorator={<LogoutRoundedIcon />}
+                endDecorator={<LogoutRoundedIcon />}
                 onClick={handleLogout}
                 className="nav-link winky-snas-list-item"
               >
-                Logout 
+                Logout
               </Button>
             </li>
-
           </ul>
         </nav>
 

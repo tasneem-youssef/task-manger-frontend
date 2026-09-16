@@ -29,7 +29,8 @@ const Tasks = () => {
   const [editDueDate, setEditDueDate] = useState("");
   const [editCompleted, setEditCompleted] = useState(false);
   const navigate = useNavigate();
-  const Base_URL = "https://task-manager-backend-six-zeta.vercel.app";
+  const Base_URL =
+    "https://task-manager-backend-production-06f3.up.railway.app";
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (!token) {
@@ -90,7 +91,6 @@ const Tasks = () => {
       setOpen(true);
     } catch (err) {
       console.error(err.response?.data || err.message);
-      console.log(task.dueDate);
       alert("Failed to fetch task");
     }
   };
@@ -183,10 +183,14 @@ const Tasks = () => {
             required
           />
         </FormControl>
-        <Button type="submit" endDecorator={<AddRoundedIcon />} sx={{marginTop: "25px"}}>
+        <Button
+          type="submit"
+          endDecorator={<AddRoundedIcon />}
+          sx={{ marginTop: "25px" }}
+        >
           Add Task
         </Button>
-        </form>
+      </form>
 
       <Table
         className="tasks-table"
