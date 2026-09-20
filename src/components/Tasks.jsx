@@ -40,7 +40,7 @@ const Tasks = () => {
 
     const fetchTasks = async () => {
       try {
-        const res = await axios.get(`${Base_URL}/api/tasks`, {
+        const res = await axios.get(`${Base_URL}/api/tasks/`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setTasks(res.data.data);
