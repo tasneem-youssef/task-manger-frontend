@@ -44,6 +44,7 @@ const Tasks = () => {
           headers: { Authorization: `Bearer ${token}` },
         });
         setTasks(res.data.data);
+        console.log(res.data.data);
       } catch (err) {
         console.error(err.response?.data || err.message);
         if (err.response?.status === 401) navigate("/login");
