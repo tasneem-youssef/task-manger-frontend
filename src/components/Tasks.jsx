@@ -43,7 +43,7 @@ const Tasks = () => {
         const res = await axios.get(`${Base_URL}/api/tasks`, {
           headers: { Authorization: `Bearer ${token}` },
         });
-        setTasks(res.data);
+        setTasks(res.data.data);
       } catch (err) {
         console.error(err.response?.data || err.message);
         if (err.response?.status === 401) navigate("/login");
